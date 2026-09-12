@@ -12,7 +12,7 @@ class Resources(HTMLParser):
             if value and not value.startswith(('data:','#')):self.refs.append(value)
 
 def update(root,game,source,version):
-    manifest_path=root/'games.json'; manifest=json.loads(manifest_path.read_text())
+    manifest_path=root/'games.json'; manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
     item=next(x for x in manifest['games'] if x['id']==game)
     target=root/item['path'];raw=source.read_bytes();text=raw.decode('utf-8')
     if not re.search(r'<html\b',text,re.I):raise ValueError('需要完整 HTML 游戏文件')
@@ -29,7 +29,9 @@ def update(root,game,source,version):
     tmp=target.with_suffix('.pending');tmp.write_bytes(raw);os.replace(tmp,target)
     item.update(version=version,sha256=hashlib.sha256(raw).hexdigest(),source='Updated via update_game.py')
     manifest['deployment_status']='not_deployed';manifest['prepared_at']=stamp
-    mt=manifest_path.with_suffix('.pending');mt.write_text(json.dumps(manifest,ensure_ascii=False,indent=2));os.replace(mt,manifest_path)
+    mt=manifest_path.with_suffix('.pending')
+    mt.write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+    os.replace(mt,manifest_path)
     assert hashlib.sha256(target.read_bytes()).hexdigest()==item['sha256']
     print('本地更新完成。固定路径：'+item['path']+'；尚未发布。')
 
