@@ -1,0 +1,31 @@
+{
+  "static_files": [
+    {
+      "path": "index.html",
+      "sha256": "ae3d73a7f54928bd26b408e2254d5a0025c19982e9d3850d25d53e83c3c1e470"
+    },
+    {
+      "path": "games/eddey/index.html",
+      "sha256": "d3851f48b01a13eaf2153a82a5c9190e6beb0dda83a5f404ff5979bf3c26b56b"
+    },
+    {
+      "path": "games/kenton/index.html",
+      "sha256": "2018a822a9aa3414b6ec75e71a4cdce52b85660688408886d4ddbf8d87d70d33"
+    },
+    {
+      "path": "games/backrooms/index.html",
+      "sha256": "5ee829deb80f9006e0f1161a827d382e23012d4866d1633dc2ccbdc8cde60f05"
+    }
+  ],
+  "inline_scripts_checked": 5,
+  "http_routes": [
+    "index.html",
+    "games/eddey/index.html",
+    "games/kenton/index.html",
+    "games/backrooms/index.html"
+  ],
+  "browser_preview": "blocked_by_client",
+  "china_network": "not_tested",
+  "deployed": false,
+  "updater": "passed on isolated copy: preservation, backup, external dependency rejection"
+}
