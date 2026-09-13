@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "prepared_at": "2026-09-12",
+  "deployment_status": "not_deployed",
+  "games": [
+    {
+      "id": "kenton",
+      "title": "Kenton World",
+      "subtitle": "哥哥 · 荒野远征",
+      "version": "v13",
+      "description": "穿上盔甲，探索方块世界，迎接血月。",
+      "path": "games/kenton/index.html",
+      "source": "Library libfile_50c65098ede4819184080acb46843ba2 version 2",
+      "sha256": "2018a822a9aa3414b6ec75e71a4cdce52b85660688408886d4ddbf8d87d70d33"
+    },
+    {
+      "id": "eddey",
+      "title": "Eddey World",
+      "subtitle": "弟弟 · 牧野生存",
+      "version": "2026-09-12",
+      "description": "从大陆出发，驯马、建造、探索森林与雪山。",
+      "path": "games/eddey/index.html",
+      "source": "Sites 795bb25f09ef298c32cb5a7613c439a71795cfc4 games/pasture",
+      "sha256": "d3851f48b01a13eaf2153a82a5c9190e6beb0dda83a5f404ff5979bf3c26b56b"
+    },
+    {
+      "id": "backrooms",
+      "title": "后室 · 五层逃离",
+      "subtitle": "迷宫探索 · 生存逃脱",
+      "version": "当前仓库版",
+      "description": "穿过黄色走廊，寻找通往下一层的电梯。",
+      "path": "games/backrooms/index.html",
+      "source": "CNB Eddeykenton/backrooms-escape 3477686dbcebf84daa55592597febd46d4cd6602",
+      "sha256": "5ee829deb80f9006e0f1161a827d382e23012d4866d1633dc2ccbdc8cde60f05"
+    }
+  ]
+}
